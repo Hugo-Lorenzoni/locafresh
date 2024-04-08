@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="fr" class="scroll-p-24 scroll-smooth antialiased">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: [
+                                'Poppins',
+                                'ui-sans-serif',
+                                'system-ui',
+                                'sans-serif',
+                                'Apple Color Emoji',
+                                'Segoe UI Emoji',
+                                'Segoe UI Symbol',
+                                'Noto Color Emoji',
+                            ],
+                        },
+                    },
+                },
+            }
+        </script>
+        <title>LocaFresh</title>
+    </head>
+    <body>
+        <header class="sticky top-0 z-10 bg-white">
+            <nav
+                class="mx-auto flex h-28 max-w-7xl items-center justify-between px-2 py-4"
+            >
+                <a href="#">
+                    <img
+                        class="w-36"
+                        src="images/locafresh_condensed.png"
+                        alt="LocaFresh logo"
+                    />
+                </a>
+                <ul class="hidden items-center gap-4 font-semibold md:flex">
+                    <li>
+                        <a
+                            href="#projet"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre projet
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#valeurs"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Nos valeurs
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#équipe"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre équipe
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="inline-block rounded-xl bg-green-500 px-6 py-3 font-semibold text-white duration-100 hover:bg-green-600"
+                            href="#"
+                        >
+                            Commander
+                        </a>
+                    </li>
+                </ul>
+                <button id="menu-toggle" class="focus:outline-none md:hidden">
+                    <svg
+                        class="h-8 w-8"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                    </svg>
+                </button>
+            </nav>
+            <div
+                id="mobile-menu"
+                data-visible="false"
+                class="shadow-box fixed bottom-0 right-0 top-0 hidden bg-white bg-opacity-95 backdrop-blur-sm md:hidden"
+            >
+                <div class="flex justify-end p-9">
+                    <button id="menu-close" class="my-1">
+                        <svg
+                            class="h-8 w-8"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex h-full flex-col gap-4 p-10 font-semibold">
+                    <li>
+                        <a
+                            href="#projet"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre projet
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#valeurs"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Nos valeurs
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="#équipe"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre équipe
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="inline-block rounded-xl bg-green-500 px-6 py-3 font-semibold text-white duration-100 hover:bg-green-600"
+                            href="#"
+                        >
+                            Commander
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section class="relative h-[60vh]">
+                <img
+                    class="h-full w-full object-cover"
+                    src="images/basket-wide.jpg"
+                    alt="Basket full a fresh vegetables"
+                />
+                <div
+                    class="absolute inset-0 mx-auto flex max-w-7xl items-center px-4 py-16"
+                >
+                    <div class="w-1/2 space-y-6 text-lg">
+                        <h1 class="text-4xl font-bold">
+                            La plateforme de livraison de produits locaux !
+                        </h1>
+
+                        <p>
+                            Nous mettons en relation les producteurs locaux avec
+                            les consommateurs pour favoriser une alimentation
+                            saine et responsable.
+                        </p>
+
+                        <a
+                            class="inline-block rounded-xl bg-green-500 px-6 py-3 text-xl font-semibold text-white duration-100 hover:bg-green-600"
+                            href="#"
+                        >
+                            Commander
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projet" class="bg-white text-gray-800">
+                <div class="mx-auto max-w-7xl space-y-4 px-4 py-16">
+                    <h2 class="text-2xl font-bold">Notre projet</h2>
+                    <div
+                        class="flex flex-col items-center justify-center gap-8 rounded-3xl bg-gray-100 p-8 md:flex-row md:justify-between"
+                    >
+                        <img
+                            src="images/courses.jpg"
+                            alt="Une nouvelle façon de faire vos courses en ligne"
+                            class="h-auto w-full rounded-2xl md:mx-auto md:max-w-sm"
+                        />
+                        <div class="space-y-4">
+                            <h2 class="text-2xl font-bold">
+                                Une nouvelle façon de faire vos courses en ligne
+                            </h2>
+                            <p class="text-lg text-gray-800">
+                                Notre prochaine application révolutionnera vos
+                                courses en ligne en vous offrant un accès
+                                exclusif à des produits frais et locaux
+                                directement de nos producteurs partenaires, vous
+                                permettant ainsi de faire vos achats depuis chez
+                                vous sans compromis sur la qualité.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center gap-8 rounded-3xl bg-gray-100 p-8 md:flex-row md:justify-between"
+                    >
+                        <div class="space-y-4">
+                            <h2 class="text-2xl font-bold">
+                                Soutenir l'économie locale et éviter le stress
+                            </h2>
+                            <p class="text-lg text-gray-800">
+                                Avec notre application, vous pourrez parcourir
+                                une variété de produits alimentaires locaux de
+                                qualité, soutenir l'économie locale et renforcer
+                                les liens communautaires, tout en évitant le
+                                stress des courses et des files d'attente.
+                            </p>
+                        </div>
+                        <img
+                            src="images/farmer.jpg"
+                            alt="Soutenir l'économie locale et éviter le stress"
+                            class="h-auto w-full rounded-2xl md:mx-auto md:max-w-sm"
+                        />
+                    </div>
+                    <div
+                        class="flex flex-col items-center justify-center gap-8 rounded-3xl bg-gray-100 p-8 md:flex-row md:justify-between"
+                    >
+                        <img
+                            src="images/diet.jpg"
+                            alt="Vers une alimentation plus consciente et responsable"
+                            class="h-auto w-full rounded-2xl md:mx-auto md:max-w-sm"
+                        />
+                        <div class="space-y-4">
+                            <h2 class="text-2xl font-bold">
+                                Vers une alimentation plus consciente et
+                                responsable
+                            </h2>
+                            <p class="text-lg text-gray-800">
+                                Restez à l'affût pour le lancement officiel de
+                                notre application qui vous permettra de
+                                commencer votre voyage vers une alimentation
+                                plus consciente et responsable, tout en
+                                contribuant à valoriser le savoir-faire local et
+                                à redécouvrir le plaisir d'une alimentation
+                                saine et durable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="valeurs" class="clear-both bg-gray-100 text-gray-800">
+                <div class="mx-auto max-w-7xl space-y-4 px-4 py-16">
+                    <h2 class="text-2xl font-bold">Nos valeurs</h2>
+                    <ul class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                        <li
+                            class="rounded-xl border-4 border-green-500 bg-white p-4"
+                        >
+                            <h3 class="pb-2 text-xl font-semibold">
+                                ✅ Qualité
+                            </h3>
+                            <p>
+                                Nous sélectionnons les meilleurs produits locaux
+                                pour vous garantir une qualité irréprochable.
+                            </p>
+                        </li>
+                        <li
+                            class="rounded-xl border-4 border-green-500 bg-white p-4"
+                        >
+                            <h3 class="pb-2 text-xl font-semibold">
+                                🏘️ Proximité
+                            </h3>
+                            <p>
+                                Nous favorisons les circuits courts pour
+                                encourager les échanges locaux et réduire
+                                l'empreinte carbone.
+                            </p>
+                        </li>
+                        <li
+                            class="rounded-xl border-4 border-green-500 bg-white p-4"
+                        >
+                            <h3 class="pb-2 text-xl font-semibold">
+                                🌟Éthique
+                            </h3>
+                            <p>
+                                Nous respectons les producteurs locaux et
+                                rémunérons équitablement leur travail.
+                            </p>
+                        </li>
+                        <li
+                            class="rounded-xl border-4 border-green-500 bg-white p-4"
+                        >
+                            <h3 class="pb-2 text-xl font-semibold">💚 Santé</h3>
+                            <p>
+                                Nous privilégions une alimentation saine et
+                                équilibrée pour votre bien-être.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="équipe" class="bg-white text-gray-800">
+                <div class="mx-auto max-w-7xl space-y-4 px-4 py-16">
+                    <h2 class="text-2xl font-bold">Notre équipe</h2>
+                    <ul
+                        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+                    >
+                        <li>
+                            <div class="rounded-xl bg-gray-100 p-4">
+                                <img
+                                    class="mx-auto h-64 w-64 rounded-full border-4 border-green-500"
+                                    src="images/zoé.jpg"
+                                    alt="Zoé"
+                                />
+                                <h3 class="text-xl font-semibold">Zoé</h3>
+                                <p>Co-fondatrice</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rounded-xl bg-gray-100 p-4">
+                                <img
+                                    class="mx-auto h-64 w-64 rounded-full border-4 border-green-500"
+                                    src="images/rodrigue.jpg"
+                                    alt="Rodrigue"
+                                />
+                                <h3 class="text-xl font-semibold">Rodrigue</h3>
+                                <p>Co-fondateur</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rounded-xl bg-gray-100 p-4">
+                                <img
+                                    class="mx-auto h-64 w-64 rounded-full border-4 border-green-500"
+                                    src="images/hugo.jpg"
+                                    alt="Hugo"
+                                />
+                                <h3 class="text-xl font-semibold">Hugo</h3>
+                                <p>Responsable web</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="rounded-xl bg-gray-100 p-4">
+                                <img
+                                    class="mx-auto h-64 w-64 rounded-full border-4 border-green-500 object-cover"
+                                    src="images/fabian.jpg"
+                                    alt="Fabian"
+                                />
+                                <h3 class="text-xl font-semibold">Fabian</h3>
+                                <p>Encadrant académique</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-gray-800 text-white">
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-16"
+            >
+                <img
+                    class="max-w-64"
+                    src="images/locafresh_white.png"
+                    alt="LocaFresh logo"
+                />
+                <p>© 2024 LocaFresh. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        document.addEventListener('click', function (event) {
+            const mobileMenu = document.getElementById('mobile-menu')
+            const menuToggle = document.getElementById('menu-toggle')
+            const menuClose = document.getElementById('menu-close')
+            if (event.target instanceof Node) {
+                if (menuToggle?.contains(event.target)) {
+                    // click on the menu toggle :
+                    // 1. open the menu and hidden menu button
+                    mobileMenu?.classList.remove('hidden')
+                    mobileMenu?.setAttribute('data-visible', 'true')
+                    // 2. hide menu button
+                    menuToggle?.classList.add('hidden')
+                    menuToggle?.setAttribute('data-visible', 'false')
+                } else if (
+                    menuClose?.contains(event.target) ||
+                    (!mobileMenu?.contains(event.target) &&
+                        mobileMenu?.getAttribute('data-visible') === 'true') ||
+                    event.target.tagName.toLowerCase() === 'a'
+                ) {
+                    // click on the close button, outside the menu or on a link :
+                    // 1. close the menu
+                    mobileMenu?.classList.add('hidden')
+                    mobileMenu?.setAttribute('data-visible', 'false')
+                    // 2. show the menu button
+                    menuToggle?.classList.remove('hidden')
+                    menuToggle?.setAttribute('data-visible', 'true')
+                }
+            }
+        })
+    </script>
+</html>
