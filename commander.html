@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="fr" class="scroll-p-24 scroll-smooth antialiased">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="LocaFresh est une plateforme de livraison de produits locaux qui met en relation les producteurs locaux avec les consommateurs pour favoriser une alimentation saine et responsable."
+        />
+        <meta name="author" content="LocaFresh" />
+        <meta
+            name="keywords"
+            content="LocaFresh, produits locaux, alimentation saine"
+        />
+        <meta name="robots" content="index, commander" />
+        <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <script defer src="/_vercel/insights/script.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            sans: [
+                                'Poppins',
+                                'ui-sans-serif',
+                                'system-ui',
+                                'sans-serif',
+                                'Apple Color Emoji',
+                                'Segoe UI Emoji',
+                                'Segoe UI Symbol',
+                                'Noto Color Emoji',
+                            ],
+                        },
+                    },
+                },
+            }
+        </script>
+        <title>LocaFresh</title>
+    </head>
+    <body>
+        <header class="sticky top-0 z-10 bg-white">
+            <nav
+                class="mx-auto flex h-28 max-w-7xl items-center justify-between px-2 py-4"
+            >
+                <a href="#">
+                    <img
+                        class="w-36"
+                        src="images/locafresh_condensed.png"
+                        alt="LocaFresh logo"
+                        loading="eager"
+                        fetchpriority="high"
+                    />
+                </a>
+                <ul class="hidden items-center gap-4 font-semibold md:flex">
+                    <li>
+                        <a
+                            href="/index.html#projet"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre projet
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/index.html#valeurs"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Nos valeurs
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/index.html#équipe"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre équipe
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="inline-block rounded-xl bg-green-500 px-6 py-3 font-semibold text-white duration-100 hover:bg-green-600"
+                            href="/commander.html"
+                        >
+                            Commander
+                        </a>
+                    </li>
+                </ul>
+                <button id="menu-toggle" class="focus:outline-none md:hidden">
+                    <svg
+                        class="h-8 w-8"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="3"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                    </svg>
+                </button>
+            </nav>
+            <div
+                id="mobile-menu"
+                data-visible="false"
+                class="shadow-box fixed bottom-0 right-0 top-0 hidden bg-white bg-opacity-95 backdrop-blur-sm md:hidden"
+            >
+                <div class="flex justify-end px-2 py-9">
+                    <button id="menu-close" class="my-1">
+                        <svg
+                            class="h-8 w-8"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="3"
+                                d="M6 18L18 6M6 6l12 12"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex h-full flex-col gap-4 p-10 font-semibold">
+                    <li>
+                        <a
+                            href="/index.html#projet"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre projet
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/index.html#valeurs"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Nos valeurs
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            href="/index.html#équipe"
+                            class="relative px-1 py-1 after:absolute after:bottom-0 after:left-0 after:z-50 after:h-[3px] after:w-0 after:rounded-full after:bg-green-500 after:duration-500 hover:after:w-full"
+                        >
+                            Notre équipe
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="inline-block rounded-xl bg-green-500 px-6 py-3 font-semibold text-white duration-100 hover:bg-green-600"
+                            href="/commander.html"
+                        >
+                            Commander
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <section class="container mx-auto px-4">
+                <img
+                    src="images/coming_soon.png"
+                    alt="Coming Soon"
+                    class="mx-auto w-full max-w-sm"
+                />
+                <div class="mx-auto max-w-xl">
+                    <h1 class="mb-4 text-3xl font-bold">
+                        Merci pour votre visite !
+                    </h1>
+                    <p class="text-lg">
+                        Notre application est actuellement en cours de
+                        développement. Revenez bientôt pour découvrir toutes les
+                        fonctionnalités passionnantes que nous préparons pour
+                        vous.
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer class="mt-16 bg-gray-800 text-white">
+            <div
+                class="mx-auto flex max-w-7xl flex-col items-center gap-8 px-4 py-16"
+            >
+                <img
+                    class="max-w-64"
+                    src="images/locafresh_white.png"
+                    alt="LocaFresh logo"
+                    loading="lazy"
+                />
+                <p>© 2024 LocaFresh. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        document.addEventListener('click', function (event) {
+            const mobileMenu = document.getElementById('mobile-menu')
+            const menuToggle = document.getElementById('menu-toggle')
+            const menuClose = document.getElementById('menu-close')
+            if (event.target instanceof Node) {
+                if (menuToggle?.contains(event.target)) {
+                    // click on the menu toggle :
+                    // 1. open the menu and hidden menu button
+                    mobileMenu?.classList.remove('hidden')
+                    mobileMenu?.setAttribute('data-visible', 'true')
+                    // 2. hide menu button
+                    menuToggle?.classList.add('hidden')
+                    menuToggle?.setAttribute('data-visible', 'false')
+                } else if (
+                    menuClose?.contains(event.target) ||
+                    (!mobileMenu?.contains(event.target) &&
+                        mobileMenu?.getAttribute('data-visible') === 'true') ||
+                    event.target.tagName.toLowerCase() === 'a'
+                ) {
+                    // click on the close button, outside the menu or on a link :
+                    // 1. close the menu
+                    mobileMenu?.classList.add('hidden')
+                    mobileMenu?.setAttribute('data-visible', 'false')
+                    // 2. show the menu button
+                    menuToggle?.classList.remove('hidden')
+                    menuToggle?.setAttribute('data-visible', 'true')
+                }
+            }
+        })
+    </script>
+</html>
